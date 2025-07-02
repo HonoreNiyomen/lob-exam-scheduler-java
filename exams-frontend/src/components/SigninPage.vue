@@ -149,6 +149,10 @@ const validateForm = () => {
 
 // Handle form submission
 const handleLogin = async () => {
+
+    const users = fetch(`/api/users`)
+    console.log("users from backend:", users);
+
     if (!validateForm()) {
         return
     }
@@ -172,7 +176,7 @@ const handleLogin = async () => {
         })
 
         if (response.ok) {
-            // Login successful - redirect to dashboard or home
+            // Login successful - redirect to dashboard or home/
             router.push('/')
         } else {
             const errorData = await response.json()
@@ -188,6 +192,7 @@ const handleLogin = async () => {
 
 // Watch for form changes to clear errors
 import { watch } from 'vue'
+
 watch(() => form.email, clearErrors)
 watch(() => form.password, clearErrors)
 </script>

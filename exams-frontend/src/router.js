@@ -5,6 +5,9 @@ import UnAuthRoot from "./layouts/UnAuthRoot.vue";
 import Home from "./components/LandingPage.vue";
 import Signin from "./components/SigninPage.vue";
 import Signup from "./components/SignupPage.vue";
+// import Features from "./components/Features.vue";
+// import Developers from "./components/Developers.vue";
+// import Contact from "./components/Contact.vue";
 
 const routes = [
   {
@@ -26,6 +29,22 @@ const routes = [
         name: "Signup Page",
         component: Signup,
       },
+
+      // {
+      //   path: "/features",
+      //   name: "Signup Page",
+      //   component: Features,
+      // },
+      // {
+      //   path: "/developers",
+      //   name: "Signup Page",
+      //   component: Developers,
+      // },
+      // {
+      //   path: "/contact",
+      //   name: "Signup Page",
+      //   component: Contact,
+      // },
     ],
   },
 ];
