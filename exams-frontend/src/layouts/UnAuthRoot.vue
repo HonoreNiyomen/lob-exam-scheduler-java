@@ -5,8 +5,8 @@
             <div class="w-full px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <!-- Logo -->
-                    <div class="flex-shrink-0">
-                        <span class="text-xl font-bold text-indigo-400">LOB EXAMS</span>
+                    <div class="p-1 bg-gray-500 rounded">
+                        <img class="max-w-32" src="/lob_favicon.png" alt="LOB EXAMS"/>
                     </div>
 
                     <!-- Desktop Links -->
@@ -154,7 +154,7 @@
                 </div>
                 <div class="mt-12 border-t border-gray-700 pt-8">
                     <p class="text-base text-gray-400 text-center">
-                        &copy; 2025 LOBExam. All rights reserved. Built with Elixir and Phoenix.
+                        &copy; 2025 LOBExam. All rights reserved. Built with Vue.js and SprintBoot.
                     </p>
                 </div>
             </div>

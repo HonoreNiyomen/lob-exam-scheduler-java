@@ -3,11 +3,10 @@
     <header class="bg-gradient-to-br from-gray-800 to-gray-900 w-full">
         <div class="w-full py-24 px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
-                Smart Exam Scheduling Tool <span class="text-indigo-400">Powered by Elixir</span>
+                Smart Exam Scheduling Tool
             </h1>
             <p class="mt-6 max-w-4xl mx-auto text-xl text-gray-300">
-                ExamFlow eliminates scheduling conflicts and simplifies exam management with Phoenix LiveView's
-                real-time capabilities.
+                ExamFlow eliminates scheduling conflicts and simplifies exam management with real-time capabilities.
             </p>
             <div class="mt-10 flex justify-center space-x-4">
                 <a href="/users/register"
@@ -29,9 +28,6 @@
                 <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
                     Powerful Features for Seamless Exam Management
                 </h2>
-                <p class="mt-4 max-w-3xl text-xl text-gray-400 mx-auto">
-                    Built with Elixir and Phoenix LiveView for real-time updates and reliability
-                </p>
             </div>
 
             <div class="mt-16 grid gap-6 sm:gap-8 lg:gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 lg:px-12">

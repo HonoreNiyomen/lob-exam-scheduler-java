@@ -150,9 +150,6 @@ const validateForm = () => {
 // Handle form submission
 const handleLogin = async () => {
 
-    const users = fetch(`/api/users`)
-    console.log("users from backend:", users);
-
     if (!validateForm()) {
         return
     }
@@ -162,7 +159,7 @@ const handleLogin = async () => {
 
     try {
         // Replace this with your actual login API call
-        const response = await fetch('/users/log_in', {
+        const response = await fetch('/api/log_in', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -176,8 +173,12 @@ const handleLogin = async () => {
         })
 
         if (response.ok) {
-            // Login successful - redirect to dashboard or home/
-            router.push('/')
+            const data = await response.json()
+            console.log(data)
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("current_user", JSON.stringify(data.user));
+
+            router.push('/dashboard')
         } else {
             const errorData = await response.json()
             errors.general = errorData.message || 'Invalid email or password'

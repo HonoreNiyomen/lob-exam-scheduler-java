@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.lob_exams.database.entities.User;
 import com.lob_exams.database.repositories.UserRepository;
+import com.lob_exams.exceptions.UserNotFoundException;
 
 @Service
 public class UserServices {
@@ -27,6 +28,11 @@ public class UserServices {
 
     public User createUser(User user) {
         return repository.save(user);
+    }
+
+    public User getUserByEmail(String email) {
+        return repository.findByEmail(email).orElseThrow(
+                () -> new UserNotFoundException("email", email));
     }
 
     public User updateUser(Long id, User userDetails) {
