@@ -85,6 +85,9 @@ public class UserController {
 
                 // Save user
                 User createdUser = service.createUser(newUser);
+                // Remove sensitive info before sending
+                createdUser.setHashedPassword(null);
+
                 return ResponseEntity.ok(createdUser);
             }
         } catch (RuntimeException e) {
