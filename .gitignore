@@ -57,3 +57,28 @@ build/
 ### VS Code ###
 .vscode/
 node_modules
+
+# Logs
+/exams-frontend/logs
+/exams-frontend/*.log
+/exams-frontend/npm-debug.log*
+/exams-frontend/yarn-debug.log*
+/exams-frontend/yarn-error.log*
+/exams-frontend/pnpm-debug.log*
+/exams-frontend/lerna-debug.log*
+
+/exams-frontend/node_modules
+/exams-frontend/dist
+/exams-frontend/dist-ssr
+/exams-frontend/*.local
+
+# Editor directories and files
+/exams-frontend/.vscode/*
+/exams-frontend/!.vscode/extensions.json
+/exams-frontend/.idea
+/exams-frontend/.DS_Store
+/exams-frontend/*.suo
+/exams-frontend/*.ntvs*
+/exams-frontend/*.njsproj
+/exams-frontend/*.sln
+/exams-frontend/*.sw?

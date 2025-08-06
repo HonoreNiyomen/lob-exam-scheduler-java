@@ -51,13 +51,18 @@
             </div>
 
             <!-- Conditional University Dropdown -->
-            <div class="mb-4" v-if="form.role === 'student' || form.role === 'university'">
+            <div class="mb-4" v-if="form.role === 'student'">
               <select v-model="form.university_id" required
                 class="w-full bg-gray-700 text-white border border-gray-600 rounded px-4 py-2 focus:ring-indigo-500 focus:border-indigo-500">
                 <option disabled value="">Select your university</option>
                 <option v-for="uni in universities" :key="uni.id" :value="uni.id">{{ uni.name }}</option>
               </select>
             </div>
+
+            <!-- Conditional University Dropdown -->
+            <div class="mb-4" v-if="form.role === 'university'">
+              <label for="university" class="block text-sm font-medium text-gray-300 mb-1">NOTE: The User Name entered will be used as your University Name*</label>
+              </div>
 
             <!-- Passwords -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">

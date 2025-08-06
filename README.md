@@ -1,13 +1,13 @@
 # 📝 LOB Exam Scheduler (Java)
 
-> A simple, efficient, and conflict-free exam scheduling system  
+> A simple, efficient, and conflict-free exam scheduling system
 > Built with **Java (Spring Boot)** backend and **Vue 3 + Vite** frontend
 
 ---
 
 ## 🚀 Project Overview
 
-The **LOB Exam Scheduler** helps academic administrators assign exams, rooms, and invigilators while automatically detecting scheduling conflicts.  
+The **LOB Exam Scheduler** helps academic administrators assign exams, rooms, and invigilators while automatically detecting scheduling conflicts.
 Students can log in to view their personalized exam timetable.
 
 ---
@@ -29,6 +29,14 @@ Students can log in to view their personalized exam timetable.
 
 ```bash
 # Build and run backend
-mvn clean install
-mvn spring-boot:run
+./mvnw clean install
+./mvnw spring-boot:run
+```
+
+### Frontend (Vue 3 + Vite)
+
+```bash
+# Build and run frontend
+npm install
+npm run dev
 ```
