@@ -4,7 +4,7 @@
         <!-- Welcome Header -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
             <div>
-                <h1 class="text-3xl font-bold text-white">Welcome back, 
+                <h1 class="text-3xl font-bold text-white">Welcome back,
                     <span class="text-indigo-400">
                         {{ currentUser.firstname }} {{ currentUser.lastname }}</span> 👋</h1>
                 <p class="text-gray-400 mt-2">Here's what's happening with your system today</p>

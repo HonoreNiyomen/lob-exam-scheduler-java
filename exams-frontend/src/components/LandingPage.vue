@@ -58,7 +58,7 @@
                     </div>
                     <h3 class="mt-6 text-lg font-medium text-white">Real-Time Updates</h3>
                     <p class="mt-2 text-base text-gray-400">
-                        Phoenix LiveView ensures students and staff see schedule changes instantly without page reloads.
+                        Vue 3 + Vite ensures students and staff see schedule changes instantly without page reloads.
                     </p>
                 </div>
 
@@ -180,7 +180,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="bg-indigo-700 w-full">
         <div class="w-full py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
             <div class="text-center">

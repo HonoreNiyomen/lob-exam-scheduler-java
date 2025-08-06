@@ -37,6 +37,8 @@ Students can log in to view their personalized exam timetable.
 
 ```bash
 # Build and run frontend
+cd exams-frontend
+
 npm install
 npm run dev
 ```
