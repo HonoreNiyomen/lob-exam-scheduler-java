@@ -283,12 +283,39 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { ref } from "vue";
+import feather from "feather-icons";
 
-const mobileMenuOpen = ref(false);
+export default {
+  name: "UnAuthAppLayout",
+  mounted() {
+  feather.replace();
 
-function toggleMenu() {
-  mobileMenuOpen.value = !mobileMenuOpen.value;
-}
+    const storedUser = localStorage.getItem("current_user");
+    const token = localStorage.getItem("token");
+
+    if (storedUser && token) {
+      try {
+        this.currentUser = JSON.parse(storedUser);
+        console.log("User access is limited to authenticated pages only.");
+
+        this.$router.push("/u/dashboard");
+      } catch (error) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("current_user");
+        console.error("Error parsing user:", error);
+        this.$router.push("/users/log_in");
+      }
+    } else {
+
+      const mobileMenuOpen = ref(false);
+
+      function toggleMenu() {
+        mobileMenuOpen.value = !mobileMenuOpen.value;
+      }
+      console.log("User access is limited to unauthenticated pages only.");
+    }
+  },
+};
 </script>

@@ -199,6 +199,11 @@ const handleLogin = async () => {
   clearErrors();
 
   try {
+    const body = JSON.stringify({
+        email: form.email,
+        password: form.password,
+        remember_me: form.rememberMe,
+      });
     // Replace this with your actual login API call
     const response = await fetch("/api/log_in", {
       method: "POST",
@@ -206,12 +211,10 @@ const handleLogin = async () => {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({
-        email: form.email,
-        password: form.password,
-        remember_me: form.rememberMe,
-      }),
+      body: body
     });
+
+    console.log("response: " + response + " body: " + body);
 
     if (response.ok) {
       const data = await response.json();
@@ -219,7 +222,7 @@ const handleLogin = async () => {
       localStorage.setItem("token", data.token);
       localStorage.setItem("current_user", JSON.stringify(data.user));
 
-      router.push("/dashboard");
+      router.push("/u/dashboard");
     } else {
       const errorData = await response.json();
       errors.general = errorData.message || "Invalid email or password";
